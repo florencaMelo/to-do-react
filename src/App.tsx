@@ -1,9 +1,14 @@
+import { BrowserRouter } from "react-router-dom"
+import { Router } from "./Router"
+ 
 function App() {
 
   return (
     <div className="App">
-      <h1>Olá</h1>
-    
+      <BrowserRouter>
+        <Router/>
+      {/* é para informar o navegador que estou usando rotas */}
+      </BrowserRouter>
     </div>
   )
 }
