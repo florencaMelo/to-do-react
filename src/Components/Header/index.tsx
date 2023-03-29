@@ -12,7 +12,7 @@ const Header = () => {
         {/* Navlink é como se fosse o "a" do html */}
       </nav>
     </header>
-   
+  // Componente retorna um HTML e é escrito com letra maiúscula 
   )
 }
 
