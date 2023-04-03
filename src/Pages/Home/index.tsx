@@ -1,22 +1,35 @@
+import { CountdownContainer, FormContainer, HomeContainer, MinutesAmountInput, Separator, TaskInput } from "./styles";
+
 export function Home () {
   return(
-    <main>
-      <form>
-        <div>
+    <HomeContainer>
+      <form onSubmit={handleCreateNewCycle()}>
+        <FormContainer>
           <label>Vou trabalhar em</label>
-          <input></input>
+          <TaskInput 
+            type="text" 
+            list="task-suggestions" 
+            placeholder="Dê um nome para seu projeto"
+          />
+          <datalist>
+            <option value="Projeto 1"/.>
+            <option value="Projeto 2"/>
+            <option value="Projeto 3"/>
+            <option value="Projeto 4."/>
+          </datalist>
+          
           <label>Durante</label>
-          <input></input>
-        </div>  
-        <div>
+          <MinutesAmountInput placeholder="00"></MinutesAmountInput>
+        </FormContainer>  
+        <CountdownContainer>
           <span>0</span>
           <span>0</span>
-          <div>:</div>
+          <Separator>:</Separator>
           <span>0</span>
           <span>0</span>     
-        </div>
-        <button>Começar</button>
+        </CountdownContainer>
+        <button type="submit">Começar</button>
       </form>
-    </main>
+    </HomeContainer>
   )
 }

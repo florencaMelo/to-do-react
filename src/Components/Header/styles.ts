@@ -14,7 +14,7 @@ export const HeaderContainer = styled.header`
       height: 3rem;
       display: flex;
       justify-content: center;
-      align-itens: center;
+      align-items: center;
       color: ${props => props.theme['gray-100']}
       border-top: 3px solid tranpsarent;
       border-top: 3px solid tranpsarent;
@@ -23,10 +23,9 @@ export const HeaderContainer = styled.header`
         border-bottom: 3px solid ${props => props.theme['green-500']};
       }
 
-      &:active{
+      &.active{
         color: ${props => props.theme['green-500']};
       }
     }
   }
-  
 `
